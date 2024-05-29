@@ -25,11 +25,11 @@ jobs:
             export TF_VAR_build_number=${{ env.build_number }}
             export build_number=${{ env.build_number }}
             cd devops-training
-            if [ -d "./${{ env.REPO_NAME }}" ]; then
+            if [ -d "./learndevtech-teamcity" ]; then
               echo "Repo name folder exists -- will move inside the folder"
             else
               echo "Repo name folder does not exist -- will clone the repo"
-                git clone https://github.com/${{ env.REPO_NAME }}.git
+                git clone https://github.com/TudorIonutElian/learndevtech-teamcity.git
             fi
 
             cd devops-training/learndevtech-teamcity
