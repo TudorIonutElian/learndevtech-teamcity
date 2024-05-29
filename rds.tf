@@ -14,7 +14,7 @@ resource "aws_db_instance" "teamcity_database" {
   instance_class       = "db.t3.micro"
   username             = var.teamcity_rds_username
   password             = var.teamcity_rds_password
-  parameter_group_name = "default.mysql5.7"
+  parameter_group_name = "default.mysql8.0"
   skip_final_snapshot  = true
   publicly_accessible  = true
 }
