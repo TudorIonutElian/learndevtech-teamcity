@@ -40,7 +40,7 @@ jobs:
 
             terraform init
             terraform plan -out=plan-${{ github.run_number }}.out
-            #terraform apply -auto-approve plan-${{ github.run_number }}.out 
+            terraform apply -auto-approve plan-${{ github.run_number }}.out 
   Tag:
     name: Add the infratag
     needs: build
