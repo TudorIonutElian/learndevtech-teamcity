@@ -32,7 +32,7 @@ jobs:
                 git clone https://github.com/${{ env.REPO_NAME }}.git
             fi
 
-            cd devops-training/${{ env.REPO_NAME }}
+            cd devops-training/learndevtech-teamcity
 
             git reset --hard origin/main
 
