@@ -8,8 +8,8 @@
 
 resource "aws_db_instance" "teamcity_database" {
   allocated_storage    = 10
-  db_name              = "mydb"
-  engine               = "postgresql"
+  db_name              = "teamcity_db"
+  engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t3.micro"
   username             = var.teamcity_rds_username
