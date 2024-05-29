@@ -9,17 +9,7 @@ variable "teamcity_instance_count" {
   description = "Number of instances to create"
 }
 
-variable "startsWith" {
-  description = "The prefix of the AMI name"
-  type        = string
-}
-
-variable "endsWith" {
-  description = "The suffix of the AMI name"
-  type        = string
-}
-
-variable "architecture" {
+variable "ami_id" {
   description = "The architecture of the AMI"
   type        = string
 }
