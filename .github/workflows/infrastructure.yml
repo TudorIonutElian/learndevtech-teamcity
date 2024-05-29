@@ -32,7 +32,8 @@ jobs:
                 git clone https://github.com/${{ env.REPO_NAME }}.git
             fi
 
-            cd ${{ env.REPO_NAME }}
+            cd devops-training/${{ env.REPO_NAME }}
+
             git reset --hard origin/main
 
             sed -i 's/TEAMCITY_RDS_USERNAME_PLACEHOLDER/${{secrets.TEAMCITY_RDS_USERNAME}}/g' variables.tfvars
