@@ -7,5 +7,5 @@ resource "aws_instance" "team_city_instance" {
   key_name      = aws_key_pair.teamcity_key.key_name
   count         = var.teamcity_instance_count
 
-  user_data     = file("scripts/teamcity_entry_script.sh")
+  user_data = file("scripts/teamcity_entry_script.sh")
 }
