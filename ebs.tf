@@ -10,5 +10,5 @@ resource "aws_ebs_volume" "teamcity_ebs_volume" {
 resource "aws_volume_attachment" "ebs_teamcity_att" {
   device_name = "/dev/sdh"
   volume_id   = aws_ebs_volume.teamcity_ebs_volume.id
-  instance_id = aws_instance.team_city_instance.id
+  instance_id = aws_instance.team_city_instance[0].id
 }
