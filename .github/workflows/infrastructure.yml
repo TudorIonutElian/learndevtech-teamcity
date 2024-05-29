@@ -40,6 +40,7 @@ jobs:
             sed -i 's/TEAMCITY_RDS_PASSWORD_PLACEHOLDER/${{secrets.TEAMCITY_RDS_PASSWORD}}/g' terraform.tfvars
 
             ls -l
+            cat terraform.tfvars
 
             #terraform init
             #terraform plan -out=plan-${{ github.run_number }}.out
