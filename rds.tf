@@ -6,7 +6,7 @@
     ON STANDBY untill lambda is ready
 */
 
-resource "aws_db_instance" "custom_cloudwatch_database" {
+resource "aws_db_instance" "teamcity_database" {
   allocated_storage    = 10
   db_name              = "mydb"
   engine               = "postgresql"
