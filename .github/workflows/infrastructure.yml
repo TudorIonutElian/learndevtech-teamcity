@@ -33,7 +33,7 @@ jobs:
             fi
 
             cd learndevtech-teamcity
-            git pull
+            git reset --hard origin/main
 
             sed -i 's/TEAMCITY_RDS_USERNAME_PLACEHOLDER/${{secrets.TEAMCITY_RDS_USERNAME}}/g' terraform.tfvars
             sed -i 's/TEAMCITY_RDS_PASSWORD_PLACEHOLDER/${{secrets.TEAMCITY_RDS_PASSWORD}}/g' terraform.tfvars
