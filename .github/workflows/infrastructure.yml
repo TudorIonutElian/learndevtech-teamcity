@@ -33,17 +33,13 @@ jobs:
             fi
 
             cd learndevtech-teamcity
-
             git pull
 
             sed -i 's/TEAMCITY_RDS_USERNAME_PLACEHOLDER/${{secrets.TEAMCITY_RDS_USERNAME}}/g' terraform.tfvars
             sed -i 's/TEAMCITY_RDS_PASSWORD_PLACEHOLDER/${{secrets.TEAMCITY_RDS_PASSWORD}}/g' terraform.tfvars
 
-            ls -l
-            cat terraform.tfvars
-
-            #terraform init
-            #terraform plan -out=plan-${{ github.run_number }}.out
+            terraform init
+            terraform plan -out=plan-${{ github.run_number }}.out
             #terraform apply -auto-approve plan-${{ github.run_number }}.out 
   Tag:
     name: Add the infratag
