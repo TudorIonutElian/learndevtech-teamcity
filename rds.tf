@@ -10,7 +10,7 @@ resource "aws_db_instance" "teamcity_database" {
   allocated_storage    = 10
   db_name              = "teamcity_db"
   engine               = "mysql"
-  engine_version       = "5.7"
+  engine_version       = "8.0.36"
   instance_class       = "db.t3.micro"
   username             = var.teamcity_rds_username
   password             = var.teamcity_rds_password
