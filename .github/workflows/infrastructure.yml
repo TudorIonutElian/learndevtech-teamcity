@@ -31,6 +31,7 @@ jobs:
               echo "Repo name folder does not exist -- will clone the repo"
                 git clone https://github.com/TudorIonutElian/learndevtech-teamcity.git
             fi
+            
 
             cd learndevtech-teamcity
             git stash && git pull

@@ -25,7 +25,7 @@ sudo mkdir agent
 sudo cat <<EOF > docker-compose.yml
 version: "3"
 services:
-  tcs:
+  teamcityservice:
     image: jetbrains/teamcity-server
     container_name: teamcity-server
     ports:
@@ -33,7 +33,7 @@ services:
     volumes:
       - data:/data/teamcity_server/datadir
       - logs:/opt/teamcity/logs
-  tca:
+  teamcityagent:
     image: jetbrains/teamcity-agent
     depends_on:
       - tcs

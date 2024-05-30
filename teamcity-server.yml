@@ -1,0 +1,23 @@
+version: "3"
+services:
+  teamcityservice:
+    image: jetbrains/teamcity-server
+    container_name: teamcity-server
+    ports:
+      - "44:8111"
+    volumes:
+      - data:/data/teamcity_server/datadir
+      - logs:/opt/teamcity/logs
+  teamcityagent:
+    image: jetbrains/teamcity-agent
+    depends_on:
+      - teamcityservice
+    container_name: teamcity-agent
+    environment:
+      SERVER_URL: "http://tcs:8111/"
+    volumes:
+      - agent:/data/teamcity_agent/conf
+volumes:
+  data:
+  logs:
+  agent:
