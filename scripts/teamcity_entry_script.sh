@@ -14,6 +14,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
 source ~/.bashrc 
 
+cd /home/ec2-user
+
 sudo mkdir teamcity
 cd teamcity
 sudo mkdir data
@@ -27,7 +29,7 @@ services:
     image: jetbrains/teamcity-server
     container_name: teamcity-server
     ports:
-      - "8111:8111"
+      - "443:8111"
     volumes:
       - data:/data/teamcity_server/datadir
       - logs:/opt/teamcity/logs
